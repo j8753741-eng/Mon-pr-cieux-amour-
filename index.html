@@ -14,49 +14,58 @@
       align-items: center;
       background-color: #fceabb;
       font-family: 'Arial', sans-serif;
+      overflow: hidden;
     }
 
     .container {
       position: relative;
-      width: 80%;
-      height: 80%;
+      width: 90%;
+      height: 90%;
       background-image: url('https://i.pinimg.com/736x/8f/8a/e4/8f8ae4def403968cb8698dba3f18508a.jpg');
       background-size: cover;
       background-position: center;
       border-radius: 15px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     }
 
     .letter {
       position: absolute;
-      top: 20%;
+      top: 15%;
       left: 50%;
       transform: translateX(-50%);
-      width: 60%;
-      padding: 20px;
-      background-color: rgba(255, 255, 255, 0.8);
-      border-radius: 10px;
+      width: 65%;
+      padding: 25px;
+      background-color: rgba(255, 255, 255, 0.85);
+      border-radius: 15px;
       text-align: center;
       font-size: 18px;
       font-weight: bold;
       color: #d9534f;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      line-height: 1.5;
     }
 
-    .heart {
+    .floating {
       position: absolute;
-      bottom: 10%;
-      left: 50%;
-      transform: translateX(-50%);
-      font-size: 36px;
-      color: red;
-      animation: float 2s infinite alternate;
+      font-size: 32px;
+      animation: float 3s infinite alternate;
     }
+
+    .heart { color: red; }
+    .fire { color: orange; }
 
     @keyframes float {
       0% { transform: translateY(0); }
-      100% { transform: translateY(-10px); }
+      100% { transform: translateY(-20px); }
     }
+
+    /* Posiciones aleatorias para corazones y fuego */
+    .heart:nth-child(2) { top: 80%; left: 20%; animation-duration: 2s; }
+    .fire:nth-child(3)  { top: 75%; left: 30%; animation-duration: 2.5s; }
+    .heart:nth-child(4) { top: 70%; left: 40%; animation-duration: 3s; }
+    .fire:nth-child(5)  { top: 65%; left: 50%; animation-duration: 2.2s; }
+    .heart:nth-child(6) { top: 60%; left: 60%; animation-duration: 2.8s; }
+    .fire:nth-child(7)  { top: 55%; left: 70%; animation-duration: 2.6s; }
   </style>
 </head>
 <body>
@@ -65,20 +74,20 @@
       Te quiero mucho,<br>
       amor bello.<br>
       Eres mi sol,<br>
-      mi abrigo y cielo. 
+      mi abrigo y cielo.<br><br>
       
-     ❤️ JE T’AIME TELLEMENT MON AMOUR ❤️
-      
-      🔥 JE SAIS QUE TU SERAS BIENTÔT À MOI 🔥
-      
+      ❤️ JE T’AIME TELLEMENT MON AMOUR ❤️<br>
+      🔥 JE SAIS QUE TU SERAS BIENTÔT À MOI 🔥<br>
       ❤️ I LOVE YOU VERY MUCH ❤️
     </div>
-    <div class="heart">❤️</div>
-    <div class="fire">🔥</div>
-    <div class="heart">❤️</div>
-    <div class="fire">🔥</div>
-    <div class="heart">❤️</div>
-    <div class="fire">🔥</div>
+
+    <!-- Corazones y fuego flotantes -->
+    <div class="floating heart">❤️</div>
+    <div class="floating fire">🔥</div>
+    <div class="floating heart">❤️</div>
+    <div class="floating fire">🔥</div>
+    <div class="floating heart">❤️</div>
+    <div class="floating fire">🔥</div>
   </div>
 </body>
 </html>
